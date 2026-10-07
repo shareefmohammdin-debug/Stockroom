@@ -1,0 +1,180 @@
+@import url('../colors.css');
+
+.inv {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 28px 32px 22px;
+    box-sizing: border-box;
+}
+
+/* =========================
+   Left side
+========================= */
+
+.inv-left {
+    display: flex;
+    flex-direction: column;
+}
+
+.inv-title {
+    margin: 0;
+    color: var(--color-text);
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 1.3;
+}
+
+.inv-text {
+    margin: 5px 0 0;
+    color: var(--color-text-secondary);
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+/* =========================
+   Product numbers
+========================= */
+
+.prdects-number {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-top: 15px;
+}
+
+.prdects-number p {
+    margin: 0;
+    font-size: 11px;
+}
+
+.product-num {
+    color: var(--color-text);
+    font-weight: 600;
+}
+
+.in,
+.out {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--color-text-secondary);
+}
+
+/* Small status circles */
+
+#green,
+#red {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+#green {
+    background-color: var(--color-success);
+}
+
+#red {
+    background-color: var(--delete-red);
+}
+
+/* =========================
+   Right side
+========================= */
+
+.inv-right {
+    display: flex;
+    align-items: center;
+}
+
+.inv-but {
+    border: none;
+    border-radius: 5px;
+    background-color: var(--color-primary);
+    color: var(--color-text-on-primary);
+
+    padding: 10px 16px;
+
+    font-size: 12px;
+    font-weight: 500;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.2s ease,
+        transform 0.1s ease;
+}
+
+.inv-but:hover {
+    background-color: #3547c9;
+}
+
+.inv-but:active {
+    transform: translateY(1px);
+}
+
+/* =========================
+   Tablet
+========================= */
+
+@media (max-width: 768px) {
+
+    .inv {
+        padding: 24px 20px 18px;
+    }
+
+    .inv-title {
+        font-size: 22px;
+    }
+
+    .inv-text {
+        font-size: 12px;
+    }
+
+    .prdects-number {
+        gap: 13px;
+    }
+}
+
+
+/* =========================
+   Mobile
+========================= */
+
+@media (max-width: 550px) {
+
+    .inv {
+        flex-direction: column;
+        gap: 18px;
+        padding: 22px 16px 18px;
+    }
+
+    .inv-left {
+        width: 100%;
+    }
+
+    .inv-title {
+        font-size: 21px;
+    }
+
+    .inv-text {
+        font-size: 12px;
+    }
+
+    .prdects-number {
+        flex-wrap: wrap;
+        gap: 10px 15px;
+        margin-top: 13px;
+    }
+
+    .inv-right {
+        width: 100%;
+    }
+
+    .inv-but {
+        width: 100%;
+        padding: 10px;
+    }
+}

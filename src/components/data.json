@@ -1,0 +1,122 @@
+[
+    {
+        "id": 1,
+        "name": "Wireless Mouse",
+        "sku": "WM-001",
+        "quantity": 45,
+        "price": 18.99,
+        "status": "inside"
+    },
+    {
+        "id": 2,
+        "name": "Mechanical Keyboard",
+        "sku": "MK-002",
+        "quantity": 20,
+        "price": 65.50,
+        "status": "inside"
+    },
+    {
+        "id": 3,
+        "name": "USB-C Cable",
+        "sku": "UC-003",
+        "quantity": 100,
+        "price": 7.99,
+        "status": "inside"
+    },
+    {
+        "id": 4,
+        "name": "Laptop Stand",
+        "sku": "LS-004",
+        "quantity": 12,
+        "price": 32.00,
+        "status": "outside"
+    },
+    {
+        "id": 5,
+        "name": "HDMI Cable",
+        "sku": "HC-005",
+        "quantity": 60,
+        "price": 11.50,
+        "status": "inside"
+    },
+    {
+        "id": 6,
+        "name": "Webcam",
+        "sku": "WC-006",
+        "quantity": 8,
+        "price": 49.99,
+        "status": "outside"
+    },
+    {
+        "id": 7,
+        "name": "USB Flash Drive 64GB",
+        "sku": "FD-007",
+        "quantity": 75,
+        "price": 14.25,
+        "status": "inside"
+    },
+    {
+        "id": 8,
+        "name": "External SSD 1TB",
+        "sku": "ES-008",
+        "quantity": 15,
+        "price": 89.99,
+        "status": "inside"
+    },
+    {
+        "id": 9,
+        "name": "Wireless Headphones",
+        "sku": "WH-009",
+        "quantity": 10,
+        "price": 55.00,
+        "status": "outside"
+    },
+    {
+        "id": 10,
+        "name": "Ethernet Cable",
+        "sku": "EC-010",
+        "quantity": 120,
+        "price": 5.75,
+        "status": "inside"
+    },
+    {
+        "id": 11,
+        "name": "Power Bank",
+        "sku": "PB-011",
+        "quantity": 25,
+        "price": 27.99,
+        "status": "inside"
+    },
+    {
+        "id": 12,
+        "name": "Bluetooth Speaker",
+        "sku": "BS-012",
+        "quantity": 6,
+        "price": 42.50,
+        "status": "outside"
+    },
+    {
+        "id": 13,
+        "name": "Monitor 24 inch",
+        "sku": "MN-013",
+        "quantity": 9,
+        "price": 145.00,
+        "status": "inside"
+    },
+    {
+        "id": 14,
+        "name": "Laptop Charger",
+        "sku": "LC-014",
+        "quantity": 18,
+        "price": 35.99,
+        "status": "inside"
+    },
+    {
+        "id": 15,
+        "name": "Keyboard Wrist Rest",
+        "sku": "KR-015",
+        "quantity": 30,
+        "price": 12.00,
+        "status": "outside"
+    }
+]

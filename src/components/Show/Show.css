@@ -1,0 +1,409 @@
+@import url('../colors.css');
+
+
+/* =================================
+   Main container
+================================= */
+
+.continer {
+    width: calc(100% - 64px);
+    margin: 0 auto;
+
+    background-color: var(--color-surface);
+
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+
+    overflow: hidden;
+
+    box-sizing: border-box;
+}
+
+
+/* =================================
+   Search area
+================================= */
+
+.search {
+    display: flex;
+    align-items: center;
+
+    padding: 12px 15px;
+
+    border-bottom: 1px solid var(--color-border);
+
+    background-color: var(--color-surface);
+}
+
+.search input {
+    width: 270px;
+    height: 34px;
+
+    box-sizing: border-box;
+
+    border: 1px solid var(--color-border);
+    border-radius: 5px;
+
+    background-color: var(--color-surface);
+
+    padding: 0 10px 0 30px;
+
+    color: var(--color-text);
+    font-size: 11px;
+
+    outline: none;
+}
+
+.search input::placeholder {
+    color: var(--color-placeholder);
+}
+
+.search input:focus {
+    border-color: var(--color-primary);
+}
+
+
+/* =================================
+   Table header
+================================= */
+
+.first-row {
+    display: grid;
+
+    grid-template-columns:
+        2.2fr
+        1fr
+        0.65fr
+        0.85fr
+        1.35fr
+        1fr;
+
+    align-items: center;
+
+    min-height: 36px;
+
+    padding: 0 15px;
+
+    box-sizing: border-box;
+
+    background-color: var(--color-surface-muted);
+
+    border-bottom: 1px solid var(--color-border);
+}
+
+.first-row-items {
+    color: var(--color-text-secondary);
+
+    font-size: 13px;
+    font-weight: 500;
+}
+
+
+/* =================================
+   Products
+================================= */
+
+.show-all {
+    width: 100%;
+}
+
+.dis-product {
+    display: grid;
+
+    grid-template-columns:
+        2.2fr
+        1fr
+        0.65fr
+        0.85fr
+        1.35fr
+        1fr;
+
+    align-items: center;
+
+    min-height: 48px;
+
+    padding: 0 15px;
+
+    box-sizing: border-box;
+
+    border-bottom: 1px solid var(--color-border);
+
+    background-color: var(--color-surface);
+
+    transition: background-color 0.15s ease;
+}
+
+.dis-product:last-child {
+    border-bottom: none;
+}
+
+.dis-product:hover {
+    background-color: var(--color-surface-muted);
+}
+
+
+/* =================================
+   Product information
+================================= */
+
+.dis-name {
+    color: var(--color-text);
+
+    font-size: 13.5px;
+    font-weight: 500;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.dis-sku {
+    color: var(--color-text-secondary);
+
+    font-size: 13.5px;
+}
+
+.dis-quantity {
+    color: var(--color-text);
+
+    font-size: 13.5px;
+}
+
+.dis-price {
+    color: var(--color-text);
+
+    font-size: 13.5px;
+}
+
+
+/* =================================
+   Stock status
+================================= */
+
+.dis-status {
+    width: fit-content;
+
+    padding: 3px 8px;
+
+    border-radius: 20px;
+
+    font-size: 13.5px;
+    font-weight: 500;
+
+    text-transform: capitalize;
+}
+
+
+/* Inside */
+
+.dis-status.inside {
+    color: var(--color-success);
+    background-color: var(--color-success-bg);
+}
+
+
+/* Outside */
+
+.dis-status.outside {
+    color: var(--delete-red);
+    background-color: var(--delete-red-bg);
+}
+
+
+/* =================================
+   Actions
+================================= */
+
+.dis-action {
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+}
+
+.edit-but,
+.delete-but {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+
+    border: none;
+    background: transparent;
+
+    padding: 0;
+
+    font-size: 13px;
+
+    cursor: pointer;
+}
+
+
+/* Edit */
+
+.edit-but {
+    color: var(--color-primary);
+}
+
+.edit-but:hover {
+    text-decoration: underline;
+}
+
+
+/* Delete */
+
+.delete-but {
+    color: var(--color-text-secondary);
+}
+
+.delete-but:hover {
+    color: var(--delete-red);
+}
+
+
+/* =================================
+   Icons
+================================= */
+
+.edit-icon,
+.delete-icon {
+    display: inline-block;
+
+    width: 11px;
+    height: 11px;
+
+    position: relative;
+}
+
+
+/* Simple edit icon */
+
+.edit-icon::before {
+    content: "";
+
+    position: absolute;
+
+    width: 7px;
+    height: 3px;
+
+    border: 1.5px solid currentColor;
+    border-radius: 1px;
+
+    transform: rotate(-45deg);
+
+    top: 3px;
+    left: 1px;
+}
+
+
+/* Simple delete icon */
+
+.delete-icon::before {
+    content: "";
+
+    position: absolute;
+
+    width: 6px;
+    height: 7px;
+
+    border: 1.3px solid currentColor;
+    border-radius: 1px;
+
+    left: 2px;
+    top: 3px;
+}
+
+.delete-icon::after {
+    content: "";
+
+    position: absolute;
+
+    width: 8px;
+    height: 1px;
+
+    background-color: currentColor;
+
+    left: 1px;
+    top: 1px;
+}
+
+.custom-link {
+  text-decoration: none;
+  color: inherit; /* Optional: Makes the link inherit the text color of its parent */
+}
+
+
+/* =================================
+   Tablet
+================================= */
+
+@media (max-width: 900px) {
+
+    .continer {
+        width: calc(100% - 40px);
+    }
+
+    .first-row,
+    .dis-product {
+        grid-template-columns:
+            1.8fr
+            0.9fr
+            0.6fr
+            0.8fr
+            1.2fr
+            1fr;
+    }
+
+    .dis-action {
+        gap: 8px;
+    }
+}
+
+
+/* =================================
+   Small tablet / large mobile
+================================= */
+
+@media (max-width: 700px) {
+
+    .continer {
+        width: calc(100% - 30px);
+
+        overflow-x: auto;
+    }
+
+    .search {
+        padding: 11px;
+    }
+
+    .search input {
+        width: 230px;
+    }
+
+    .first-row,
+    .dis-product {
+        min-width: 650px;
+    }
+}
+
+
+/* =================================
+   Mobile
+================================= */
+
+@media (max-width: 500px) {
+
+    .continer {
+        width: calc(100% - 20px);
+
+        border-radius: 7px;
+    }
+
+    .first-row,
+    .dis-product {
+        min-width: 620px;
+    }
+
+    .search input {
+        width: 100%;
+    }
+}

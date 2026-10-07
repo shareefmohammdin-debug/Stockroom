@@ -1,0 +1,52 @@
+@import url('../colors.css');
+
+.nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-surface);
+    padding: 15px;
+    border-bottom: 1px solid var(--color-border);
+}
+.left-left{
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    gap: 10px;
+}
+.left{
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    gap: 10px;
+    width: 47%;
+}
+.right{
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    gap: 10px;
+    width: 47%;
+}
+
+.name{
+    font-weight: 300;
+    color: var(--color-text);
+}
+.inventory{
+    color: var(--color-primary);
+    margin-left: 15px;
+
+}
+
+.jdText{
+    color: var(--color-text-secondary);
+    font-size: 12.5;
+}
+
+.JD{
+    padding: 5px;
+    border-radius: 50%;
+    border: 1px solid var(--color-border);
+    background-color: var(--color-page-bg);
+}

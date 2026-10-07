@@ -1,0 +1,14 @@
+@import url('../src/components/colors.css');
+
+* {
+    font-family: sans-serif;
+    margin: 0;
+}
+
+.app {
+    background-color: var(--color-page-bg);
+}
+
+/* .content{
+    padding: 40px;
+} */

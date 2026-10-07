@@ -1,0 +1,37 @@
+:root {
+    /* اللون الرئيسي: الأزرار والعناصر النشطة */
+    --color-primary: #4355DB;
+
+    /* الخلفيات */
+    --color-page-bg: #F7F8FA;
+    /* خلفية الصفحة */
+    --color-surface: #FFFFFF;
+    /* البطاقات والحقول والنوافذ */
+    --color-surface-muted: #F9FAFC;
+    /* رأس الجدول وأسفل النوافذ */
+
+    /* الحدود والفواصل */
+    --color-border: #E4E7ED;
+
+    /* النصوص */
+    --color-text: #202632;
+    /* العناوين والنص الأساسي */
+    --color-text-secondary: #697181;
+    /* النصوص الثانوية */
+    --color-placeholder: #9299A6;
+    /* النص الإرشادي داخل الحقول */
+    --color-text-on-primary: #FFFFFF;
+    /* النص فوق اللون الرئيسي */
+
+    /* حالة المخزون: متوفر */
+    --color-success: #28754E;
+    --color-success-bg: #EDF7F0;
+
+    /* حالة المخزون: كمية منخفضة */
+    --color-warning: #94620A;
+    --color-warning-bg: #FFF6E4;
+
+    /* حالة المخزون: غير متوفر، والتحذيرات وزر الحذف */
+    --delete-red: #C03D3D;
+    --delete-red-bg: #FCEEEE;
+}
