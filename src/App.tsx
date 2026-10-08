@@ -1,6 +1,6 @@
 import './App.css'
 import { BrowserRouter, Route, Routes } from 'react-router'
-import { Navbar, Inventory, Show, Add, Edit, Delete } from './components'
+import { Navbar, Inventory, Show, Add, Edit } from './components'
 
 
 function App() {
@@ -16,7 +16,7 @@ function App() {
           <Route path='/' element={<Show />} />
           <Route path='/add' element={<Add />} />
           <Route path='/edit' element={<Edit />} />
-          <Route path='/delete' element={<Delete />} />
+          {/* <Route path='/delete' element={<Delete />} /> */}
         </Routes>
       </div>
     </BrowserRouter>

@@ -1,0 +1,255 @@
+@import url('../colors.css');
+
+
+/* ================================
+   Overlay
+================================ */
+
+.delete-overlay {
+    position: fixed;
+    inset: 0;
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+
+    padding-top: 50px;
+
+    background-color: rgba(32, 38, 50, 0.08);
+
+    z-index: 1000;
+
+    box-sizing: border-box;
+}
+
+
+
+/* ================================
+   Dialog
+================================ */
+
+.delete-dialog {
+    width: 360px;
+    max-width: calc(100% - 30px);
+
+    background-color: var(--color-surface);
+
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+
+    box-shadow: 0 8px 25px rgba(32, 38, 50, 0.10);
+
+    overflow: hidden;
+
+    box-sizing: border-box;
+}
+
+
+/* ================================
+   Icon
+================================ */
+
+.delete-icon-box {
+    width: 28px;
+    height: 28px;
+
+    margin: 14px 14px 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background-color: var(--delete-red-bg);
+}
+
+.delete-dialog-icon {
+    position: relative;
+
+    width: 11px;
+    height: 12px;
+
+    border: 1.5px solid var(--delete-red);
+
+    border-radius: 2px;
+
+    box-sizing: border-box;
+}
+
+.delete-dialog-icon::before {
+    content: "";
+
+    position: absolute;
+
+    width: 13px;
+    height: 1.5px;
+
+    left: -2.5px;
+    top: -4px;
+
+    background-color: var(--delete-red);
+
+    border-radius: 2px;
+}
+
+.delete-dialog-icon::after {
+    content: "";
+
+    position: absolute;
+
+    width: 5px;
+    height: 1.5px;
+
+    left: 1.5px;
+    top: -6px;
+
+    background-color: var(--delete-red);
+
+    border-radius: 2px;
+}
+
+
+/* ================================
+   Content
+================================ */
+
+.delete-content {
+    padding: 12px 14px 18px;
+}
+
+.delete-title {
+    margin: 0;
+
+    color: var(--color-text);
+
+    font-size: 16px;
+    font-weight: 600;
+
+    line-height: 1.4;
+}
+
+.delete-message {
+    margin: 8px 0 0;
+
+    color: var(--color-text-secondary);
+
+    font-size: 11px;
+    line-height: 1.6;
+}
+
+.delete-message strong {
+    color: var(--color-text);
+
+    font-weight: 600;
+}
+
+
+/* ================================
+   Actions
+================================ */
+
+.delete-actions {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    gap: 8px;
+
+    padding: 10px 14px;
+
+    background-color: var(--color-surface-muted);
+
+    border-top: 1px solid var(--color-border);
+}
+
+
+/* Cancel */
+
+.cancel-delete {
+    height: 30px;
+
+    padding: 0 13px;
+
+    border: 1px solid var(--color-border);
+    border-radius: 5px;
+
+    background-color: var(--color-surface);
+
+    color: var(--color-text);
+
+    font-size: 10.5px;
+    font-weight: 500;
+
+    cursor: pointer;
+
+    transition: background-color 0.2s ease;
+}
+
+.cancel-delete:hover {
+    background-color: var(--color-surface-muted);
+}
+
+
+/* Confirm delete */
+
+.confirm-delete {
+    height: 30px;
+
+    padding: 0 14px;
+
+    border: 1px solid var(--delete-red);
+    border-radius: 5px;
+
+    background-color: var(--delete-red);
+
+    color: var(--color-text-on-primary);
+
+    font-size: 10.5px;
+    font-weight: 500;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.2s ease,
+        transform 0.1s ease;
+}
+
+.confirm-delete:hover {
+    background-color: #a93434;
+}
+
+.confirm-delete:active {
+    transform: translateY(1px);
+}
+
+
+/* ================================
+   Mobile
+================================ */
+
+@media (max-width: 500px) {
+
+    .delete-overlay {
+        padding-top: 30px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .delete-dialog {
+        width: 100%;
+        max-width: 360px;
+    }
+
+    .delete-title {
+        font-size: 15px;
+    }
+
+    .delete-message {
+        font-size: 11px;
+    }
+
+    .delete-actions {
+        padding: 10px 12px;
+    }
+}

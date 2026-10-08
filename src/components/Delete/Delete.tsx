@@ -1,7 +1,62 @@
+import './Delete.css';
 
+interface DeleteProps {
+    hide: boolean;
+    onClose: () => void;
+}
 
-export default function Delete() {
+export default function Delete({ hide, onClose }: DeleteProps) {
+
+    if(hide) return null;
+
     return (
-        <div>delete</div>
-    )
+        <div className="delete-overlay">
+
+            <div className="delete-dialog">
+
+                {/* Delete icon */}
+                <div className="delete-icon-box">
+                    <span className="delete-dialog-icon"></span>
+                </div>
+
+                {/* Content */}
+                <div className="delete-content">
+
+                    <h2 className="delete-title">
+                        Delete product?
+                    </h2>
+
+                    <p className="delete-message">
+                        Remove <strong>product name</strong> ({4}) from your inventory?
+                        <br />
+                        This action cannot be undone.
+                    </p>
+
+                </div>
+
+                {/* Actions */}
+                <div className="delete-actions">
+
+                    <button
+                        type="button"
+                        className="cancel-delete"
+                        onClick={onClose}
+                    >
+                        Cancel
+                    </button>
+
+                    <button
+                        type="button"
+                        className="confirm-delete"
+                        onClick={onClose}
+                    >
+                        Delete
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+    );
 }

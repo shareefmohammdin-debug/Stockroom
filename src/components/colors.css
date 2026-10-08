@@ -35,3 +35,8 @@
     --delete-red: #C03D3D;
     --delete-red-bg: #FCEEEE;
 }
+
+.custom-link {
+  text-decoration: none;
+  color: inherit; /* Optional: Makes the link inherit the text color of its parent */
+}

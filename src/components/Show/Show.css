@@ -326,6 +326,18 @@
     top: 1px;
 }
 
+.show-foot{
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    border-radius: 5px;
+}
+.show-foot-p{
+    color: var(--color-text-secondary);
+    font-size: small;
+}
+
 .custom-link {
   text-decoration: none;
   color: inherit; /* Optional: Makes the link inherit the text color of its parent */

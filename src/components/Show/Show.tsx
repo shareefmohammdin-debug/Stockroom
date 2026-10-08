@@ -1,8 +1,13 @@
 import './Show.css';
 import { Link } from 'react-router'
 import data from '../data.json';
+import {Delete} from '../index'
+import { useState } from 'react';
 
 export default function Show() {
+
+    const [hideSwitch, setHideSwitch] = useState<boolean>(true)
+
     return (
         <div className="continer">
 
@@ -61,21 +66,29 @@ export default function Show() {
                                     </button>
                                 </Link>
 
-                                <Link className='custom-link' to='/delete'>
+                                {/* <Link className='custom-link' to='/delete'> */}
                                     <button
                                         type="button"
                                         className="delete-but"
+                                        onClick={()=>setHideSwitch(false)}
                                     >
-                                        <span className="delete-icon"></span>
+                                        <span className="delete-icon" ></span>
                                         Delete
                                     </button>
-                                </Link>
+                                {/* </Link> */}
                             </div>
 
                         </div>
                     );
                 })}
+
+                {/* the show foot */}
+                <div className="show-foot">
+                    <p className='show-foot-p'>Showing all {data.length} products</p>
+                </div>
             </div>
+
+                <Delete hide={hideSwitch}  onClose={()=>setHideSwitch(true)}/>
 
         </div>
     );

@@ -118,5 +118,133 @@
         "quantity": 30,
         "price": 12.00,
         "status": "outside"
+    },
+    {
+        "id": 16,
+        "name": "Ergonomic Mouse",
+        "sku": "EM-016",
+        "quantity": 45,
+        "price": 25.50,
+        "status": "outside"
+    },
+    {
+        "id": 17,
+        "name": "Mechanical Keyboard",
+        "sku": "MK-017",
+        "quantity": 20,
+        "price": 89.99,
+        "status": "outside"
+    },
+    {
+        "id": 18,
+        "name": "Desk Mat Large",
+        "sku": "DM-018",
+        "quantity": 60,
+        "price": 18.00,
+        "status": "outside"
+    },
+    {
+        "id": 19,
+        "name": "Monitor Stand",
+        "sku": "MS-019",
+        "quantity": 15,
+        "price": 34.95,
+        "status": "outside"
+    },
+    {
+        "id": 20,
+        "name": "USB-C Hub",
+        "sku": "UH-020",
+        "quantity": 50,
+        "price": 42.00,
+        "status": "inside"
+    },
+    {
+        "id": 21,
+        "name": "Laptop Cooling Pad",
+        "sku": "CP-021",
+        "quantity": 25,
+        "price": 22.99,
+        "status": "outside"
+    },
+    {
+        "id": 22,
+        "name": "HD Webcam",
+        "sku": "WC-022",
+        "quantity": 12,
+        "price": 59.99,
+        "status": "inside"
+    },
+    {
+        "id": 23,
+        "name": "Ring Light",
+        "sku": "RL-023",
+        "quantity": 40,
+        "price": 15.50,
+        "status": "inside"
+    },
+    {
+        "id": 24,
+        "name": "Noise Canceling Headphones",
+        "sku": "NCH-024",
+        "quantity": 8,
+        "price": 149.99,
+        "status": "outside"
+    },
+    {
+        "id": 25,
+        "name": "Bluetooth Speaker",
+        "sku": "BS-025",
+        "quantity": 35,
+        "price": 29.99,
+        "status": "inside"
+    },
+    {
+        "id": 26,
+        "name": "External SSD 1TB",
+        "sku": "SSD-026",
+        "quantity": 18,
+        "price": 95.00,
+        "status": "outside"
+    },
+    {
+        "id": 27,
+        "name": "Cable Management Clips",
+        "sku": "CC-027",
+        "quantity": 100,
+        "price": 5.99,
+        "status": "inside"
+    },
+    {
+        "id": 28,
+        "name": "Vertical Mouse",
+        "sku": "VM-028",
+        "quantity": 0,
+        "price": 27.50,
+        "status": "inside"
+    },
+    {
+        "id": 29,
+        "name": "Desk Lamp with Qi Charger",
+        "sku": "DL-029",
+        "quantity": 22,
+        "price": 38.00,
+        "status": "outside"
+    },
+    {
+        "id": 30,
+        "name": "Blue Light Blocking Glasses",
+        "sku": "BG-030",
+        "quantity": 75,
+        "price": 14.95,
+        "status": "outside"
+    },
+    {
+        "id": 31,
+        "name": "Foot Rest Under Desk",
+        "sku": "FR-031",
+        "quantity": 14,
+        "price": 21.00,
+        "status": "inside"
     }
 ]
