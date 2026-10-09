@@ -1,11 +1,19 @@
 import './Delete.css';
+import data from '../data.json'
 
 interface DeleteProps {
     hide: boolean;
+    proId:number;
     onClose: () => void;
 }
 
-export default function Delete({ hide, onClose }: DeleteProps) {
+export default function Delete({ hide, proId, onClose }: DeleteProps) {
+
+  
+    function deleteProduct(){
+        data.splice(proId, 1)
+        onClose()
+    }
 
     if(hide) return null;
 
@@ -48,7 +56,7 @@ export default function Delete({ hide, onClose }: DeleteProps) {
                     <button
                         type="button"
                         className="confirm-delete"
-                        onClick={onClose}
+                        onClick={deleteProduct}
                     >
                         Delete
                     </button>

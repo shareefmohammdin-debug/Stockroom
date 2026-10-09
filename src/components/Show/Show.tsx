@@ -7,6 +7,7 @@ import { useState } from 'react';
 export default function Show() {
 
     const [hideSwitch, setHideSwitch] = useState<boolean>(true)
+    const [productId, setProductId] = useState<number>(0)
 
     return (
         <div className="continer">
@@ -70,7 +71,7 @@ export default function Show() {
                                     <button
                                         type="button"
                                         className="delete-but"
-                                        onClick={()=>setHideSwitch(false)}
+                                        onClick={()=>{setHideSwitch(false);setProductId(pro.id)}}
                                     >
                                         <span className="delete-icon" ></span>
                                         Delete
@@ -88,7 +89,7 @@ export default function Show() {
                 </div>
             </div>
 
-                <Delete hide={hideSwitch}  onClose={()=>setHideSwitch(true)}/>
+                <Delete hide={hideSwitch} proId={productId}  onClose={()=>setHideSwitch(true)}/>
 
         </div>
     );
