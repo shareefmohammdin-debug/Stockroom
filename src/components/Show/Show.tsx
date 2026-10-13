@@ -1,13 +1,52 @@
 import './Show.css';
 import { Link } from 'react-router'
-import data from '../data.json';
-import {Delete} from '../index'
-import { useState } from 'react';
+// import data from '../data.json';
+import { Delete } from '../index'
+import { useState, useEffect } from 'react';
+import axios, {type AxiosError} from 'axios';
+
+interface Post {
+    id: number;
+    name: string;
+    sku: string;
+    quantity: number;
+    price: number;
+    product_status: string;
+}
 
 export default function Show() {
 
+
     const [hideSwitch, setHideSwitch] = useState<boolean>(true)
     const [productId, setProductId] = useState<number>(0)
+
+    const [data, setData] = useState<Post[]>([]);
+    const [loading, setLoading] = useState<boolean>(true);
+    const [error, setError] = useState<string | null>(null);
+
+
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+                const data = await axios.get("http://localhost:1122/stock")
+                setData(data.data[0])
+                setError(null)
+
+                console.log(data.data)
+
+            } catch (err) {
+                const error = err as AxiosError
+                setError(error.message)
+
+            } finally {
+                setLoading(false)
+            }
+        }
+        fetchData()
+    }, []);
+
+    if (loading) return <div>Loading...</div>;
+    if (error) return <div>Error: {error}</div>;
 
     return (
         <div className="continer">
@@ -49,11 +88,11 @@ export default function Show() {
                             </div>
 
                             <div className="dis-price">
-                                ${pro.price.toFixed(2)}
+                                ${pro.price}
                             </div>
 
-                            <div className={`dis-status ${pro.status}`}>
-                                {pro.status}
+                            <div className={`dis-status ${pro.product_status}`}>
+                                {pro.product_status}
                             </div>
 
                             <div className="dis-action">
@@ -68,14 +107,14 @@ export default function Show() {
                                 </Link>
 
                                 {/* <Link className='custom-link' to='/delete'> */}
-                                    <button
-                                        type="button"
-                                        className="delete-but"
-                                        onClick={()=>{setHideSwitch(false);setProductId(pro.id)}}
-                                    >
-                                        <span className="delete-icon" ></span>
-                                        Delete
-                                    </button>
+                                <button
+                                    type="button"
+                                    className="delete-but"
+                                    onClick={() => { setHideSwitch(false); setProductId(pro.id) }}
+                                >
+                                    <span className="delete-icon" ></span>
+                                    Delete
+                                </button>
                                 {/* </Link> */}
                             </div>
 
@@ -89,7 +128,7 @@ export default function Show() {
                 </div>
             </div>
 
-                <Delete hide={hideSwitch} proId={productId}  onClose={()=>setHideSwitch(true)}/>
+            <Delete hide={hideSwitch} proId={productId} onClose={() => setHideSwitch(true)} />
 
         </div>
     );
