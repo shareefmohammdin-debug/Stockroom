@@ -15,7 +15,7 @@ function App() {
         <Routes>
           <Route path='/' element={<Show />} />
           <Route path='/add' element={<Add />} />
-          <Route path='/edit' element={<Edit />} />
+          <Route path='/edit/:id' element={<Edit />} />
           {/* <Route path='/delete' element={<Delete />} /> */}
         </Routes>
       </div>

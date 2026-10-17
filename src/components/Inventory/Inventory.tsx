@@ -1,16 +1,55 @@
 import './Inventory.css';
 import { Link } from 'react-router'
-import data from '../data.json';
+import { useState, useEffect } from 'react';
+import axios, { type AxiosError } from 'axios';
+// import data from '../data.json';
+// import data from "../useAxios"
+
+interface Post {
+    id: number;
+    name: string;
+    sku: string;
+    quantity: number;
+    price: number;
+    product_status: string;
+}
 
 export default function Inventory() {
+
+
+    const [data, setData] = useState<Post[]>([]);
+    const [loading, setLoading] = useState<boolean>(true);
+    const [error, setError] = useState<string | null>(null);
+
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+                const response = await axios.get("http://localhost:1122/stock");
+                if (Array.isArray(response.data) && response.data[0]) {
+                    setData(response.data[0]);
+                }
+                setError(null);
+            } catch (err) {
+                const error = err as AxiosError;
+                setError(error.message);
+            } finally {
+                setLoading(false);
+            }
+        };
+        fetchData();
+    }, []);
+
+    if (loading) return <div className="inv">Loading inventory...</div>;
+    if (error) return <div className="inv">Error: {error}</div>;
 
     const products = data.length;
     let inside = 0;
     let outside = 0;
 
+
     data.forEach((pro) => {
-        if (pro.status === 'inside') inside++;
-        if (pro.status === 'outside') outside++;
+        if (pro.product_status === 'inside') inside++;
+        if (pro.product_status === 'outside') outside++;
     });
 
     return (

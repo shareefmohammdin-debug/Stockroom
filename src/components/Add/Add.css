@@ -1,12 +1,12 @@
 @import url('../colors.css');
 
 .add-product {
-    /* min-height: 100vh; */
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-
+    padding: 16px;
+    box-sizing: border-box;
 }
 
 .add-form {
@@ -14,20 +14,24 @@
     max-width: 550px;
     box-sizing: border-box;
     background-color: var(--color-surface);
-    padding: 15px;
+    padding: 20px;
     border-radius: 10px;
 }
 
 .addtitle-div {
     margin-bottom: 30px;
 }
-.addtitle-div h1{
+
+.addtitle-div h1 {
     font-size: 25px;
+    margin: 0 0 8px;
+    color: var(--color-text-primary);
 }
 
-.add-p{
+.add-p {
     color: var(--color-text-secondary);
-    font-size: small;
+    font-size: 13px;
+    line-height: 1.5;
     margin-top: 4px;
 }
 
@@ -37,39 +41,34 @@
 .add-price-div {
     display: flex;
     flex-direction: column;
-    gap: 2px;
+    gap: 6px;
     margin: 15px auto;
 }
 
 .add-label {
-    font-size: 12px;
-    font-weight: 400;
+    font-size: 14px;
+    font-weight: 500;
     color: var(--color-text-primary);
 }
 
 .add-input {
     width: 100%;
-    height: 40px;
+    height: 42px;
     padding: 0 12px;
     box-sizing: border-box;
-
     border: 1px solid var(--color-border);
     border-radius: 6px;
-
     background-color: var(--color-background);
     color: var(--color-text-primary);
-
+    font: inherit;
     font-size: 14px;
     outline: none;
-
     transition: border-color 0.2s ease;
 }
 
 .add-input:focus {
     border-color: var(--color-primary);
 }
-
-/* Quantity + Price */
 
 .add-quantity-price-div {
     display: flex;
@@ -83,72 +82,89 @@
     min-width: 200px;
 }
 
-/* Status */
-
-.slock-status{
-    margin: 20px 0 20px 0 ;
+.slock-status {
+    margin: 20px 0;
 }
+
+.add-slock {
+    color: var(--color-text-primary);
+    font-size: 14px;
+    font-weight: 500;
+    margin: 0 0 8px;
+}
+
 .status-div {
     width: 100%;
     display: flex;
     gap: 10px;
-    margin-top: 2px ;
+    margin-top: 2px;
 }
 
 .status-div button {
     flex: 1;
     height: 40px;
-
     border: 1px solid var(--color-border);
     border-radius: 6px;
-
     background-color: var(--color-background);
     color: var(--color-text-primary);
-
     cursor: pointer;
-    font-size: 13px;
-
+    font-size: 14px;
     transition: 0.2s ease;
 }
 
-.add-active{
-    /* no thing yet */
-}
-
-.status-div button:hover {
+.status-div button:hover,
+.status-div button.add-active {
     background-color: var(--color-primary);
+    border-color: var(--color-primary);
     color: #fff;
-    /* background-color: var(--color-surface); */
 }
 
-/* Bottom buttons */
+.add-message {
+    padding: 10px 12px;
+    border-radius: 6px;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.add-message.success {
+    color: #167444;
+    background: #e8f7ee;
+}
+
+.add-message.error {
+    color: #b42318;
+    background: #fff0ee;
+}
 
 .add-submit {
     width: 100%;
     display: flex;
     justify-content: flex-end;
     gap: 10px;
-    margin-top: 5px;
-
-
+    margin-top: 12px;
 }
 
 .add-submit button {
-    height: 40px;
+    min-height: 40px;
     padding: 0 18px;
-
     border-radius: 6px;
-    font-size: 13px;
+    font-size: 14px;
     cursor: pointer;
-
-    transition: 0.2s ease;
+    transition: opacity 0.2s ease;
 }
+
+.add-submit button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
 #edit-cancel,
-#add-cancel  {
+#add-cancel {
     border: 1px solid var(--color-border);
     background-color: transparent;
     color: var(--color-text-primary);
 }
+
 #edit-cancel:hover,
 #add-cancel:hover {
     background-color: var(--color-background);
@@ -166,10 +182,7 @@
     opacity: 0.9;
 }
 
-/* Mobile */
-
 @media (max-width: 600px) {
-
     .add-product {
         padding: 10px;
     }
@@ -191,7 +204,8 @@
         flex-direction: column-reverse;
     }
 
-    .add-submit button {
+    .add-submit button,
+    .add-submit .custom-link {
         width: 100%;
     }
 }

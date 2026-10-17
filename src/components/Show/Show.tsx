@@ -32,7 +32,7 @@ export default function Show() {
                 setData(data.data[0])
                 setError(null)
 
-                console.log(data.data)
+                // console.log(data.data)
 
             } catch (err) {
                 const error = err as AxiosError
@@ -96,7 +96,7 @@ export default function Show() {
                             </div>
 
                             <div className="dis-action">
-                                <Link className='custom-link' to='/edit'>
+                                <Link className='custom-link' to={`/edit/${pro.id}`}>
                                     <button
                                         type="button"
                                         className="edit-but"
